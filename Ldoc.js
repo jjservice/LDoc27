@@ -6,7 +6,13 @@ const videos = [
         img: "40YearsIntheWoodsPic.jpg", 
         video: "He Spent 40 Years Alone in the Woods- (720p, h264, youtube).mp4" 
     },
-   
+    {   
+        id: 2, 
+        name: "109-Year-Old Veteran and", 
+        artist: " His Secrets to Life", 
+        img: "109-Year-Old-Veteran-Pic.jpg", 
+        video: "109-Year-Old Veteran and His Secrets to Life.mp4" 
+    },
 ];
 
 const searchInput = document.getElementById("search-input");
