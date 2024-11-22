@@ -1,0 +1,660 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    flex-direction: column;
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to right,black,black,darkblue,maroon,black,black);
+    height: auto;
+  
+  }
+  body.lightPlayer{
+    background:linear-gradient(to right,black,darkblue,lightgreen,maroon,black);
+    transition: 1s;
+  }  
+  .video-player {
+    margin: 0% auto;
+    max-width: 370px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.363);
+    border: 6px solid rgba(139, 0, 46, 0.336);
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 6px solid rgba(255, 0, 34, 0.342);
+    border-radius: 40px;
+    box-shadow: 0px 2px 15px lightskyblue;
+    height: auto;
+    transition: 0.5s;
+  }
+  body.lightPlayer .video-player{
+    box-shadow: 0px 2px 15px yellowgreen;
+    background-image: url(lollipop_3GIF.gif);
+    background-position: bottom;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    transition: 5s;
+  }
+  #video-player{
+    margin: 0% auto;
+    display: flex;
+    position: relative;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(6, 114, 182, 0.493);
+    transition: 0.5s;
+    border: 1px solid rgba(153, 205, 50, 0.781);
+    box-shadow: 0px 1px 4px lightskyblue;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  body.lightPlayer #video-player{
+    background:linear-gradient(to right,rgba(0, 0, 139, 0.486),rgba(128, 0, 0, 0.479));
+    border: 1px solid rgba(153, 205, 50, 0.788);
+    box-shadow: 0px 2px 3px rgb(201, 6, 201);
+    
+  }
+  .search-bar {
+    margin-bottom: 10px;
+  }
+  
+  h1{
+    margin: 0% auto;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px gold;
+    background: rgba(245, 245, 245, 0.089);
+    border: none;
+    padding: 2px;
+    border-radius: 100%;
+    margin-bottom: 5px;
+    box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.322);
+  }
+  body.lightPlayer h1{
+    border: 1px solid rgba(255, 68, 0, 0.5);
+    box-shadow: 0px 2px 10px palevioletred;
+    background:linear-gradient(to right,rgba(0, 0, 0, 0.61),rgba(0, 0, 139, 0.486),rgba(128, 0, 0, 0.479),rgba(0, 0, 0, 0.555));
+  }
+  #search-input {
+    margin: 0% auto;
+    width: 100%;
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px gold;
+    border: 1px solid rgba(153, 205, 50, 0.788);
+    border-radius: 10px;
+    background-color: rgba(18, 119, 177, 0.438);
+    text-align: center;
+    box-shadow: 0px 1px 5px lightsalmon;
+    transition: 0.5s;
+    background-image: url(MovieGifff.gif);
+    background-position: center;
+    background-size: 100%;
+  
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  #search-input:focus{
+    background-color: rgba(4, 14, 87, 0.322);
+    transition: 0.5s;
+  
+  }
+  body.lightPlayer #search-input:focus{
+    background-color: rgba(119, 0, 0, 0.267);
+    transition: 0.5s;
+  }
+  body.lightPlayer #search-input{
+    background-color: rgba(221, 57, 112, 0.233);
+    transition: 0.5s;
+  }
+  
+  
+  .video-list {
+    height: 26vh;
+    list-style: none;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+  }
+  .video-list::-webkit-scrollbar{
+    background: transparent;
+    border-radius: 10px;
+    
+  }
+  .video-list::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right,black,black,darkblue,maroon,black,black);
+    border-radius: 10px;
+    border: 1px solid yellowgreen;
+    box-shadow: 0px 3px 6px rgba(255, 217, 0, 0.459);
+    padding: 10px;
+    margin: 10px;
+    width: 10px;
+    height: 40px;
+    cursor: pointer;
+  }
+  body.lightPlayer .video-list::-webkit-scrollbar-thumb{
+    background: transparent;
+  }
+  .video-list::-webkit-scrollbar-corner{
+    width: 0;
+    height: 0;
+  }
+  
+  .video-list::-webkit-scrollbar-thumb:hover{
+    background: rgba(135, 206, 250, 0.438);
+  }
+  body.lightPlayer .video-list::-webkit-scrollbar-thumb:hover{
+    background: rgba(149, 206, 35, 0.61);
+  }
+  
+  
+  .video-item {
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: darkgray;
+    text-shadow: 1px 1px 2px darkblue;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid yellowgreen;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 0, 255, 0.089);
+    border-radius: 20px;
+  }
+  
+     
+  .video-item img {
+    margin: 0% auto;
+    flex-direction: column;
+    display: flex;
+    width: 140px;
+    height: 140px;
+    border: 2px solid yellowgreen;
+    box-shadow: 0px 1px 5px pink;
+    border-radius: 20px;
+    margin-right: 5px;
+    border-radius: 20px;
+  }
+  .video-item button{
+    margin: 0 auto;
+    display: flex;
+    height: 40px;
+    padding: 2px 10px;
+    color: rgba(255, 217, 0, 0.555);
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    margin-right: 10px;
+    border-bottom: 2px solid rgba(255, 217, 0, 0.582);
+    background-color: rgba(255, 0, 140, 0.096);
+    box-shadow: 0px 2px 0px blue;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+    
+  .video-item:hover {
+    background-color: rgba(255, 255, 255, 0.158);
+    border-radius: 20px;
+  }
+  .video-item button:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    color: rgba(255, 217, 0, 0.801);
+    background-color: rgba(177, 15, 64, 0.384);
+    box-shadow: 0px 3px 5px skyblue;
+  }
+  
+  body.lightPlayer .video-item button{
+    color: rgba(220, 20, 60, 0.548);
+    background-color: rgba(0, 0, 0, 0.432);
+    border-bottom: 2px solid rgba(3, 3, 134, 0.719);
+    box-shadow: 0px 2px 0px yellowgreen;
+    
+  }
+  body.lightPlayer .video-item button:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    color: crimson;
+    background-color: rgba(0, 0, 139, 0.534);
+    box-shadow: 0px 3px 5px gold;
+  }
+  
+  
+  .player {
+    margin: 0% auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (min-width: 768px) {
+    .video-player {
+      margin: 0% auto;
+      min-width: 750px;
+      height: auto;
+      margin: 20px auto;
+  
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 40px;
+      box-shadow: 0px 2px 15px lightblue;
+      transition: 0.5s;
+    
+    }
+    body.lightPlayer .video-player{
+      box-shadow: 0px 2px 15px yellowgreen;
+      background-image: url(lollipop_3GIF.gif);
+      background-position: bottom;
+      background-size: 30%;
+      background-repeat: no-repeat;
+      box-shadow: 0px 2px 15px yellowgreen;
+      transition: 3s;
+    }
+    .video-list{
+      margin: 0% auto;
+      font-size: 25px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 170px;
+    }
+    .video-list img {
+      margin: 0% auto;
+      min-width: 150px;
+      min-height: 150px;
+    }
+    .video-item{
+      margin-bottom: 15px;
+    }
+    #search-input {
+      margin: 0% auto;
+      margin-bottom: 10px;
+      min-width: 100%;
+      box-shadow: 0px 2px 10px darkblue;
+      background-image: url(DancinGif555.gif);
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: 6%;
+    }
+    .volume-controls{
+      min-width: 200px;
+      padding: 5px;
+      border-radius: 100%;
+      background-color: rgba(0, 0, 54, 0.534);
+      border: 2px solid rgba(255, 166, 0, 0.712);
+      box-shadow: 0px 2px 6px yellowgreen;
+    }
+    #video-player{
+      margin: 0% auto;
+      display: flex;
+      position: relative;
+      height: 350px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 80%;
+      border-radius: 20px;
+      background: rgba(6, 114, 182, 0.493);
+      transition: 0.5s;
+      border: 1px solid rgba(153, 205, 50, 0.781);
+      box-shadow: 0px 1px 4px lightskyblue;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    #voice-search-button{
+      position: relative;
+      top: -45px;
+      right: 19px;
+      height: 30px;
+      width: 90px;  
+      border-radius: 10px;
+      border: none;
+      cursor: pointer
+      
+    }
+    #language-selector{
+      position: relative;
+      top: -10px;
+  }
+}
+  
+  
+  .homebtn{
+    margin: 0% auto;
+    border-bottom: 1px solid gold;
+    box-shadow: 0px 2px 6px blue;
+    background-image: url(MusicGig.gif);
+    background-position: center;
+    background-size: 100%;
+    border-radius: 7px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 2px 0px;
+    opacity: 80%;
+    margin-bottom: 5px;
+  
+  }
+  .homebtn ion-icon{
+    margin: 0% auto;
+    color: rgba(255, 217, 0, 0.568);
+    justify-content: center;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .homebtn ion-icon:hover{
+    color: gold;
+  }
+  .homebtn:hover{
+    color: gold;
+    transition: color 0.5s ease;
+    box-shadow: 2px 2px 20px gold;
+    transform: scale(1.10);
+    transition: 0.5s;
+    cursor: pointer;
+  
+  }
+  
+  .lolli-title{
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px 2px darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+  }
+  body.lightPlayer .lolli-title{
+    color: white;
+    text-shadow: 2px 2px 4px gold;
+  }
+  .lolli-title ion-icon{
+    color: rgba(255, 217, 0, 0.527);
+    border-bottom: 2px solid gold;
+    box-shadow: 0px 4px 6px rgb(66, 66, 238);
+    border-radius: 12px;
+    background-image: url(light-bulbBlackGif.gif);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(255, 192, 203, 0.096);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  body.lightPlayer .lolli-title ion-icon{
+    color: rgba(255, 73, 109, 0.438);
+    text-shadow: 2px 2px 4px gold;
+    border-bottom: 2px solid yellowgreen;
+    box-shadow: 0px 3px 6px palevioletred;
+    background-color: rgba(0, 0, 0, 0.247);
+    background-image: url(light-bulbBLUEGif.gif);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(255, 192, 203, 0.096);
+    cursor: pointer;
+  }
+  
+  .jj-title{
+    display: flex;
+    margin: 0% auto;
+    justify-content: center;
+    color: darkgray;
+    text-shadow: 2px 2px 4px darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin-bottom: 1px;
+    
+  }
+  .jj-title ion-icon{
+    color: wheat;
+    border-radius: 50px;
+  }
+  body.lightPlayer .jj-title ion-icon{
+    color: rgba(255, 217, 0, 0.466);
+  }
+  
+  #video-controls{
+    margin: 0% auto;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(245, 245, 245, 0.096);
+    box-shadow: 0px 2px 10px rgba(135, 206, 250, 0.322);
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  #video-controls button{
+    margin: 0 auto;
+    font-size: 25px;
+    padding: 10px 10px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 218, 6, 0.733);
+    background: rgba(20, 91, 172, 0.397);
+    border: 1px solid yellowgreen;
+    box-shadow: 0px 1px 4px lightsalmon;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  #play-pause-button i{
+    margin: 0% auto;
+    font-size: 35px;
+   
+    
+  }
+  #play-pause-button{
+    font-size: 45px;
+  }
+  body.lightPlayer #video-controls button{
+    color: crimson;
+    background: rgba(0, 0, 0, 0.548);
+    border: 1px solid yellowgreen;
+    box-shadow: 0px 1.5px 1px lightsalmon;
+  }
+  
+  body.lightPlayer #video-controls{
+    background: linear-gradient(to right,rgba(0, 0, 139, 0.486),rgba(228, 117, 136, 0.39),rgba(128, 0, 0, 0.479));
+    box-shadow: 0px 2px 10px lightsalmon;
+  }
+  
+  
+  
+  
+  
+  .song-item span {
+    flex-grow: 1;
+    }
+    
+    progress {
+    margin: 0% auto;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    
+    
+    }
+    progress::-webkit-progress-bar {
+    background-color: rgba(51, 2, 14, 0.301);
+    height: 20px;
+    padding: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    border: 1px solid rgba(153, 205, 50, 0.781);
+    
+    }
+    progress::-webkit-progress-value {
+    background-color: rgba(10, 69, 158, 0.534);
+    padding: 5px;
+    border-radius: 20px;
+    }
+    body.lightPlayer progress::-webkit-progress-bar{
+      background-color: rgba(0, 0, 54, 0.534);
+      border: 1px solid rgba(153, 205, 50, 0.781);
+    }
+    body.lightPlayer progress::-webkit-progress-value{
+      background-color: rgba(184, 37, 93, 0.822);
+    }
+    
+    #volume-slider{
+      margin: 0% auto;
+      width: 140px;
+      height: 30px;
+      border-radius: 100%;
+      box-shadow: 0px 4px 6px rgba(173, 216, 230, 0.541);
+      opacity: 80%;  
+    }
+    .volume-controls{
+      margin: 0% auto;
+      display: flex;
+      width: 140px;
+      padding: 5px;
+      border-radius: 100%;
+      background-color: rgba(1, 1, 59, 0.548);
+      border: 2px solid rgba(255, 166, 0, 0.712);
+      box-shadow: 0px 5px 2px rgba(5, 5, 172, 0.74);
+    }
+    body.lightPlayer #volume-slider{
+      box-shadow: 0px 4px 6px palevioletred;
+      border: 2px solid rgba(153, 205, 50, 0.781);
+      
+    }
+    body.lightPlayer .video-controls{
+      box-shadow: 0px 5px 2px rgba(128, 0, 0, 0.5);
+    }
+
+    
+  
+  #volume-slider{
+    margin: 0% auto;
+    width: 140px;
+    height: 30px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 6px rgba(173, 216, 230, 0.541);
+    opacity: 80%;  
+  }
+  .volume-controls{
+    margin: 0% auto;
+    display: flex;
+    width: 140px;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: rgba(1, 1, 59, 0.548);
+    border: 2px solid rgba(255, 166, 0, 0.712);
+    box-shadow: 0px 5px 2px rgba(5, 5, 172, 0.74);
+  }
+  body.lightPlayer #volume-slider{
+    box-shadow: 0px 4px 6px palevioletred;
+    border: 2px solid rgba(153, 205, 50, 0.781);
+    
+  }
+  body.lightPlayer .volume-controls{
+    box-shadow: 0px 5px 2px rgba(128, 0, 0, 0.5);
+  }
+  #HideShow-Btn{
+    margin: 0% auto;
+    display: flex;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: rgba(5, 25, 114, 0.336);
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 255, 0.356);
+    box-shadow: 0px 2px 5px lightblue;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 15px;
+    color: wheat;
+    text-shadow: 2px 2px 2px darkblue;
+    opacity: 80%;
+    
+  }
+  body.lightPlayer #HideShow-Btn{
+    color: gold;
+    text-shadow: 2px 2px 2px maroon;
+    border-bottom: 2px solid rgba(243, 45, 84, 0.582);
+    box-shadow: 0px 2px 5px yellow;
+  }
+  #language-selector{
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    color: rgba(180, 153, 1, 0.904);
+    right: 100px;
+    margin-bottom: 2px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 139, 0.342);
+    color: wheat;
+    border: none;
+    text-shadow: 1px 1px 2px yellowgreen;
+    cursor: pointer;
+  }
+  #voice-search-button{
+    background-color: transparent;
+    position: relative;
+    right: 19px;
+    height: 30px;
+    width: 90px;  
+    bottom: 34px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  #voice-search-button i{
+    font-size: 20px;
+    color: rgba(180, 153, 1, 0.904);
+    padding: 5px;
+    width: 50px;
+    border: 1px solid rgba(153, 205, 50, 0.404);
+    background-color: rgba(0, 139, 86, 0.199);
+    box-shadow: 0px 2px 1px lightblue;
+    border-radius: 7px;
+  }
+  #voice-search-button i:hover{
+    box-shadow: 0px 2px 10px gold;
+  }
+  body.lightPlayer #voice-search-button i{
+    font-size: 20px;
+    color: rgba(220, 20, 60, 0.788);
+    padding: 5px;
+    border: 1px solid rgba(153, 205, 50, 0.404);
+    background-color: rgba(0, 139, 86, 0.199);
+    box-shadow: 0px 2px 1px palevioletred;
+    border-radius: 7px;
+  }
+  body.lightPlayer #voice-search-button i:hover{
+    font-size: 20px;
+    color: rgb(235, 62, 96);
+    padding: 5px;
+    border: 1px solid rgba(153, 205, 50, 0.404);
+    box-shadow: 0px 2px 10px yellowgreen;
+  }

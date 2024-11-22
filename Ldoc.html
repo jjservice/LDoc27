@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOLLIPOP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Ldoc.css">
+</head>
+<body class="lightPlayer">
+
+    <div class="video-player">
+        <h1 class="lolli-title">LOLLIP<ion-icon name="headset-sharp" onclick="toggleClassPlayer()"></ion-icon>P</h1>
+        <!-- Search bar -->
+         
+        <button id="HideShow-Btn">Screen</button>
+        <video id="video-player" width="100%" controls>
+          <source id="video-source" src="" type="video/mp4">
+        </video>
+          <br>
+           <!-- Video display area -->
+    
+        <input type="text" id="search-input" placeholder=".;.DOCUMENTARIES.;.">
+
+        <button id="voice-search-button"><i class="fas fa-microphone"></i>
+          <audio id="notification-sound" src="notification.mp3" preload="auto"></audio>
+        </button>
+     
+      <select id="language-selector">
+        <option value="en-US">English</option>
+        <option value="es-ES">Spanish</option>
+        <option value="fr-FR">French</option>
+        <!-- Add more languages as needed -->
+        </select>
+      
+        <!-- Video list -->
+        <div id="video-list" class="video-list"></div>
+
+         <!-- Progress bar -->
+           <!-- Progress Bar -->
+     <progress id="progress-bar" value="0" max="100" style="width: 100%; margin-top: 20px;"></progress>
+        <!-- Controls -->
+     
+
+        <div id="video-controls" class="controls">
+
+            <button id="mute-button" class="control-btn"><i class="fas fa-volume-up"></i></button>
+            <button id="prev-button" class="control-btn"><i class="fas fa-step-backward"></i></button>
+            <button id="play-pause-button" class="control-btn"><i class="fas fa-play"></i></button>
+            <button id="next-button" class="control-btn"><i class="fas fa-step-forward"></i></button>
+            <button id="random-button" class="control-btn"><i class="fas fa-random"></i></button>
+           
+          </div>
+            <!-- Volume and progress -->
+            <div class="volume-controls">
+                <input type="range" id="volume-slider" value="1" max="1" step="0.01">
+           </div>
+     
+
+        <div class="jj-title">JJPoweredIT<ion-icon name="bonfire-sharp"></ion-icon></div>
+     <div class="homebtn"><a href="https://jjservice.github.io/L2/1.html">
+        <ion-icon name="home"></ion-icon></a></div>
+    </div>
+
+    
+</body>
+<script src="Ldoc.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
