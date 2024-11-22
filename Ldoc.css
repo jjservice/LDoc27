@@ -98,9 +98,10 @@
     text-align: center;
     box-shadow: 0px 1px 5px lightsalmon;
     transition: 0.5s;
-    background-image: url(MovieGifff.gif);
+    background-image: url(DocumentariesGif.gif);
     background-position: center;
     background-size: 100%;
+    opacity: 80%;
   
     text-align: center;
     justify-content: center;
