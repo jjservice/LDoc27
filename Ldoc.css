@@ -117,7 +117,10 @@
   
   }
   body.lightPlayer #search-input:focus{
-    background-color: rgba(119, 0, 0, 0.267);
+    background-image: url(bonfiregifff.gif);
+    background-position: center;
+    background-size: 60%;
+    background-color: rgba(4, 14, 87, 0.322);
     transition: 0.5s;
   }
   body.lightPlayer #search-input{
