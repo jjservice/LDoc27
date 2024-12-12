@@ -1,6 +1,13 @@
 const videos = [
     {   
         id: 1, 
+        name: "Training AI takes heavy toll on Kenyans working for $2 an hour", 
+        artist: " Source: 60 Minutes", 
+        img: "KenyaAiheavytollPic.jpg", 
+        video: "Training AI takes heavy toll on Kenyans working for $2 an hour _ 60 Minutes.mp4" 
+    },
+    {   
+        id: 1, 
         name: "He Spent 40 Years Alone in the Woods,", 
         artist: "and Now Scientists Love Him", 
         img: "40YearsIntheWoodsPic.jpg", 
