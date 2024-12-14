@@ -694,3 +694,229 @@
     border: 1px solid rgba(153, 205, 50, 0.404);
     box-shadow: 0px 2px 10px yellowgreen;
   }
+
+  
+
+.product img{
+  margin: 0% auto;
+  position: relative;
+  display: flex;
+  height: 180px;
+  width: 180px;
+  border: 2px solid lightskyblue;
+  padding: 2px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 10px white;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  transition: 1s;
+}
+.product img:hover{
+  transform: scale(1.10);
+  transition: 0.5s;
+  cursor: pointer;
+}
+body.lightPlayer .product img{
+  border: 2px solid rgba(255, 217, 0, 0.856);
+  box-shadow: 0px 2px 8px rgb(153, 205, 50);
+  transition: 1s;
+}
+
+/* Modal for image slider */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 2px;
+  border: 2px solid lightskyblue;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px white;
+}
+body.lightPlayer .modal-content img {
+  border: 2px solid gold;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px yellowgreen;
+}
+
+/* Next and Previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s;
+  border-radius: 10px;
+ 
+}
+.prev {
+  left: 0;
+  border-right: 2px solid rgba(255, 217, 0, 0.856);
+}
+
+.next {
+  right: 0;
+  border-left: 2px solid rgba(255, 217, 0, 0.87);
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: gold;
+}
+details{
+  position: relative;
+  margin: 0% auto;
+  margin-top: -30px;
+  margin-bottom: 5px;
+  display: flex;
+  color: transparent;
+  text-shadow: 2px 2px 4px darkblue;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  
+ 
+}
+details summary{
+  margin: 0% auto;
+}
+details  p{
+  margin: 0% auto;
+  background-image: url(NikelogoGif.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px solid lightskyblue;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0px 2px 8px black;
+}
+body.lightPlayer details p{
+  border: 1px solid rgba(153, 205, 50, 0.774);
+} 
+details  p:hover{
+  transform: scale(1.05);
+  transition: 1s;
+   box-shadow: 0px 2px 8px gold;
+}
+
+
+details a{
+  text-decoration: none;
+}
+details a input{
+  margin: 0% auto;
+  position: relative;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  padding: 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: darkgreen;
+  border-radius: 8px;
+  color: wheat;
+  text-shadow: 0px 0px 2px gold;
+  border-bottom: 1px solid wheat;
+  box-shadow: 0px 2px 10px darkblue;
+  cursor: pointer;
+}
+body.lightPlayer details a input{
+  border-bottom: 1px solid gold;
+}
+details a input:hover{
+  transform: scale(1.10);
+  transition: 0.5s ease-in;
+  background-color: green;
+  box-shadow: 0px 2px 10px gold;
+}
+.Go-to-Store-Btn{
+  margin: 0% auto;
+  position: relative;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 139, 0.329);
+  border-radius: 10px;
+  color: wheat;
+  text-shadow: 0px 0px 2px gold;
+  border-bottom: 1px solid blue;
+  border-top: 1px solid red;
+  border-left: 1px solid gold;
+  border-right: 1px solid gold;
+  box-shadow: 0px 2px 6px darkgray;
+  cursor: pointer;
+}
+body.lightPlayer details a input{
+  border-bottom: 1px solid gold;
+ 
+}
+details a input:hover{
+  transform: scale(1.10);
+  transition: 0.5s ease-in;
+  background-color: green;
+  box-shadow: 0px 2px 10px gold;
+}
+
+details  .Shop-Visit-Pic{
+  margin: 0% auto;
+  background-image: url(MonkeyDesignGif.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px solid lightskyblue;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0px 2px 8px black;
+  margin-bottom: 10px;
+}
+body.lightPlayer details .Shop-Visit-Pic{
+  border: 1px solid rgba(153, 205, 50, 0.774);
+} 
+details  .Shop-Visit-Pic:hover{
+  transform: scale(1.05);
+  transition: 1s;
+   box-shadow: 0px 2px 8px gold;
+}
+
