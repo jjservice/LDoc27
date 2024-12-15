@@ -1,20 +1,27 @@
 const videos = [
     {   
         id: 1, 
+        name: "Most burgers eaten in one minute", 
+        artist: "Guinness World Records", 
+        img: "MostBurgersEatenPic.jpg", 
+        video: "Most burgers eaten in one minute - Guinness World Records(Official Video).mp4" 
+    },
+    {   
+        id: 2, 
         name: "Training AI takes heavy toll on Kenyans working for $2 an hour", 
         artist: " Source: 60 Minutes", 
         img: "KenyaAiheavytollPic.jpg", 
         video: "Training AI takes heavy toll on Kenyans working for $2 an hour _ 60 Minutes.mp4" 
     },
     {   
-        id: 1, 
+        id: 3, 
         name: "He Spent 40 Years Alone in the Woods,", 
         artist: "and Now Scientists Love Him", 
         img: "40YearsIntheWoodsPic.jpg", 
         video: "He Spent 40 Years Alone in the Woods- (720p, h264, youtube).mp4" 
     },
     {   
-        id: 2, 
+        id: 4, 
         name: "109-Year-Old Veteran and", 
         artist: " His Secrets to Life", 
         img: "109-Year-Old-Veteran-Pic.jpg", 
