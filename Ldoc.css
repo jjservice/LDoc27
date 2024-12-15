@@ -52,7 +52,6 @@
     transition: 0.5s;
     border: 1px solid rgba(153, 205, 50, 0.781);
     box-shadow: 0px 2px 6px lightskyblue;
-    margin-bottom: 10px;
     cursor: pointer;
   }
   
@@ -793,7 +792,7 @@ body.lightPlayer .modal-content img {
 details{
   position: relative;
   margin: 0% auto;
-  margin-top: -40px;
+  margin-top: -30px;
   margin-bottom: 5px;
   display: flex;
   color: transparent;
