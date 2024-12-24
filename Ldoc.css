@@ -28,6 +28,7 @@
     box-shadow: 0px 2px 15px lightskyblue;
     height: auto;
     transition: 0.5s;
+    margin-bottom: 55px;
   }
   body.lightPlayer .video-player{
     box-shadow: 0px 2px 15px yellowgreen;
@@ -276,6 +277,7 @@
       transition: 1s;
       min-height: 170px;
       border: none;
+      margin-bottom: 45px;
     
     }
     body.lightPlayer .video-player{
@@ -372,22 +374,26 @@
 }
   
   
-  .homebtn{
-    margin: 0% auto;
-    border-bottom: 1px solid gold;
-    box-shadow: 0px 2px 6px blue;
-    background-image: url(MusicGig.gif);
-    background-position: center;
-    background-size: 100%;
-    border-radius: 7px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    padding: 2px 0px;
-    opacity: 80%;
-    margin-bottom: 5px;
-  
-  }
+.homebtn{
+  margin: 0% auto;
+  position: fixed;
+  left: 5px;
+  bottom: 0px;
+  border-bottom: 1px solid gold;
+  box-shadow: 0px 2px 6px blue;
+  background-image: url(MusicGig.gif);
+  background-position: center;
+  background-size: 100%;
+  border-radius: 7px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 2px 0px;
+  opacity: 80%;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+}
   .homebtn ion-icon{
     margin: 0% auto;
     color: rgba(255, 217, 0, 0.568);
@@ -922,4 +928,30 @@ details  .Shop-Visit-Pic:hover{
   transition: 1s;
    box-shadow: 0px 2px 8px gold;
 }
+
+
+footer{
+  margin: 0% auto;
+  flex-direction: column;
+  bottom: 0%;
+  left: 0;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding: 5px;
+  color: rgb(48, 47, 47);
+
+   }
+   footer p{
+    width: 200px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.062);
+    padding: 5px;
+    border-radius: 20px;
+   }
+   footer ion-icon{
+    color: rgba(255, 217, 0, 0.411);
+   }
 

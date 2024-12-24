@@ -63,15 +63,26 @@
            
           </div>
             <!-- Volume and progress -->
-            <div class="volume-controls">
+            <div class="volume-controls" style="margin-bottom: 10px;">
                 <input type="range" id="volume-slider" value="1" max="1" step="0.01">
            </div>
      
 
-        <div class="jj-title">&copysr;JJPoweredIT<ion-icon name="bonfire-sharp"></ion-icon></div>
-     <div class="homebtn"><a href="javascript:history.back()"><ion-icon name="arrow-back-sharp"></ion-icon></a></div>
 
     </div>
+
+    <footer>
+      <div class="homebtn"><a href="javascript:history.back()"><ion-icon name="arrow-back-sharp"></ion-icon></a></div>
+      <p>&copy;<span id="currentYear"></span>JJPoweredIT<ion-icon name="bonfire-sharp"></ion-icon></p>
+    </footer>
+  
+    <script>
+      // Get the current year
+      const currentYear = new Date().getFullYear();
+      
+      // Find the element with id "currentYear" and set its content to the current year
+      document.getElementById("currentYear").textContent = currentYear;
+    </script>
      
       <!-- Modal for displaying images -->
   <div id="myModal" class="modal">
