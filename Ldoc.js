@@ -58,30 +58,29 @@ function renderVideos(filteredVideos = videos) {
         videoItem.innerHTML = `
             <img src="${video.img}" alt="${video.name}">
             <span>${video.name} - ${video.artist}</span>
-            <button class="play-button"><i class="fas fa-play"></i></button>
         `;
-        const playButton = videoItem.querySelector(".play-button");
-        playButton.addEventListener("click", () => {
-            playOrPauseVideo(video, playButton);
+
+        const videoImage = videoItem.querySelector("img"); // Get the image element
+        videoImage.addEventListener("click", () => {
+            playOrPauseVideo(video);  // Corrected function call here
         });
 
         videoList.appendChild(videoItem);
     });
 }
 
-function playOrPauseVideo(video, button) {
+function playOrPauseVideo(video) {  // Removed the unused 'img' argument
+    // Get the song image element by ID
+    const videoImageDisplay = document.getElementById("current-video-image");
+
     if (isPlaying && currentVideoId === video.id) {
         videoPlayer.pause();
-        button.querySelector("i").classList.replace("fa-pause", "fa-play");
-        playPauseButton.querySelector("i").classList.replace("fa-pause", "fa-play");
         isPlaying = false;
     } else {
         videoSource.src = video.video;
         videoSource.dataset.videoId = video.id;
         videoPlayer.load();
         videoPlayer.play();
-        button.querySelector("i").classList.replace("fa-play", "fa-pause");
-        playPauseButton.querySelector("i").classList.replace("fa-play", "fa-pause");
         isPlaying = true;
         currentVideoId = video.id;
     }
